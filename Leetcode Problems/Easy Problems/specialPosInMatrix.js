@@ -34,6 +34,37 @@ var numSpecial = function (mat) {
   return res;
 };
 
+// Better Approach
+
+var numSpecial = function (mat) {
+  let m = mat.length;
+  let n = mat[0].length;
+  let rowCount = new Array(m).fill(0); // how many 1s in row
+  let colCount = new Array(m).fill(0); // how many 1s in column
+
+  for (let row = 0; row < m; row++) {
+    for (let col = 0; col < n; col++) {
+      if (mat[row][col] == 1) {
+        rowCount[row]++;
+        colCount[col]++;
+      }
+    }
+  }
+
+  let res = 0;
+  for (let row = 0; row < m; row++) {
+    for (let col = 0; col < n; col++) {
+      if (mat[row][col] == 0) continue;
+
+      if (rowCount[row] == 1 && colCount[col] == 1) {
+        res++;
+      }
+    }
+  }
+
+  return res;
+};
+
 console.log(
   numSpecial([
     [1, 0, 0],
