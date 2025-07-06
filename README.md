@@ -4,6 +4,6 @@ This repo will contain all logic building questions solutions in javascript, Tar
 - Leetcode Questions
 - Leetcode Premium Questions
 
-Following Neetcode 160 Questions List
+Following Neetcode 150 Questions List
 
 
