@@ -1,4 +1,6 @@
 // Question Link: https://leetcode.com/problems/valid-anagram
+// Use HashMap to get better Time Complexity
+
 var isAnagram = function (s, t) {
   for (let i of s) {
     if (t.includes(i)) {
