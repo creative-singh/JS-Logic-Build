@@ -2,13 +2,12 @@
 // 3100. Water Bottles II
 
 function maxBottlesDrunk(numBottles: number, numExchange: number): number {
-    let emptyBottles = numBottles
-    let res = numBottles
+    let emptyBottles = numBottles;
     
     while(numExchange <= emptyBottles) {
-        res++;
+        numBottles++;
         emptyBottles -= numExchange - 1;
         numExchange++;
     }
-    return res
+    return numBottles;
 };
