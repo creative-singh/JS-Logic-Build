@@ -5,6 +5,22 @@ var reverseWords = function (s) {
   return s.trim().split(/\s+/).reverse().join(' ')
 };
 
+var reverseWords = function(s) {
+    return s.split(" ").filter(word => word).reverse().join(' ');
+};
+
+var reverseWords = function(s) {
+    let arr = s.trim().split(" ");
+    
+    let res = [];
+    for(let i = arr.length - 1; i >= 0; i--) {
+        if(arr[i])
+            res.push(arr[i])
+    }
+    
+    return res.join(" ")
+};
+
 var reverseWords = function (s) {
   let words = []
   let word = ""
@@ -29,3 +45,5 @@ var reverseWords = function (s) {
   }
   return str
 };
+
+
